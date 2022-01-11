@@ -1,18 +1,42 @@
 import { useState } from "react";
-import Button from "./Button";
 
 function Tes() {
-  const [name, setName] = useState("username");
-  const handClick = () => {
-    const names = ["Castro", "Michael", "James"];
-    const int = Math.floor(Math.random() * names.length);
-    setName(names[int]);
+  const [peopleDetail, setPeopleDetail] = useState(["Rocky", 234]);
+
+  const obj = () => {
+    const peopleDetails = [
+      {
+        name: "Castro", //0
+        age: 12,
+        gender: "boy",
+      },
+      {
+        name: "Carrick", //1
+        age: 27,
+        gender: "boy",
+      },
+      {
+        name: "Michael", //2
+        age: 90,
+        gender: "man",
+      },
+      {
+        name: "Sassy", //3
+        age: 23,
+        gender: "girl",
+      },
+    ];
+    const int = Math.floor(Math.random() * peopleDetails.length);
+    setPeopleDetail(peopleDetails[int]);
   };
 
   return (
     <div>
-      <p>Hello my name is {name}</p>
-      <Button event={() => handClick()} classes={"btn"} text={"Click Me"} />
+      <p>
+        Hello my name is {peopleDetail.name} and i am {peopleDetail.age} old{" "}
+        {peopleDetail.gender}
+      </p>
+      <button onClick={obj}>Click to Change</button>
     </div>
   );
 }
