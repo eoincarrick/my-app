@@ -1,9 +1,13 @@
 import "./index.css";
-function Footer() {
-  const today = new Date();
+
+import React from "react";
+
+function Footer({ length }) {
   return (
     <footer className="footer">
-      <p>Copyright &copy; {today.getFullYear()}</p>
+      <p>
+        {length} {length === 1 ? "item" : "items"} left
+      </p>
     </footer>
   );
 }

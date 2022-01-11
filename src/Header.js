@@ -1,11 +1,14 @@
 import "./index.css";
 
-function Header() {
+function Header({ title }) {
   return (
     <header className="header">
-      <h1>Groceries List</h1>
+      <h1>{title}</h1>
     </header>
   );
 }
 
+Header.defaultProps = {
+  title: "Default Title",
+};
 export default Header;
