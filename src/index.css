@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 html {
@@ -79,7 +80,6 @@ ul li::before {
 .item:first-child {
   margin: 0;
 }
-
 .item input[type="checkbox"] {
   text-align: center;
   width: 2.5rem;
@@ -114,4 +114,16 @@ ul li::before {
 .item svg:hover {
   color: red;
   outline: none;
+}
+
+.gif {
+  width: 10rem;
+  height: 10rem;
+}
+
+.cla {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

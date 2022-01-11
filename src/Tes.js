@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function Tes() {
-  const [peopleDetail, setPeopleDetail] = useState(["Rocky", 234]);
+  const [peopleDetail, setPeopleDetail] = useState("rocky");
 
   const obj = () => {
     const peopleDetails = [
