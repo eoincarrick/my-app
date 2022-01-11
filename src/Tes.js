@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 
 function Tes() {
   const [name, setName] = useState("username");
@@ -11,7 +12,7 @@ function Tes() {
   return (
     <div>
       <p>Hello my name is {name}</p>
-      <button onClick={handClick}>Click to Change</button>
+      <Button event={() => handClick()} classes={"btn"} text={"Click Me"} />
     </div>
   );
 }
